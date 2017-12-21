@@ -44,6 +44,6 @@ public class SearchController {
 	headers.put("CamelTwitterKeywords", key);
 	
 	
-        return producerTemplate.requestBodyAndHeader("direct:search", "", "CamelTwitterKeywords", h);
+        return producerTemplate.requestBodyAndHeader("direct:search", "", "CamelTwitterKeywords", headers);
     }
 }
